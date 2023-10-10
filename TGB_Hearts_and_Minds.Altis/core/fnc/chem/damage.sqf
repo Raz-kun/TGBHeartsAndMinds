@@ -44,16 +44,9 @@ if (
 } else {
     if (
         [
-            "G_RegulatorMask_base_F",
-            "G_AirPurifyingRespirator_01_base_F",
-            "GP21_GasmaskPS",
-            "GP5Filter_RaspiratorPS",
-            "GP7_RaspiratorPS",
-            "SE_M17",
-            "Hamster_PS",
-            "SE_S10",
-            "MK502"
-        ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
+           "SCE_G_CN2F","SCE_G_CN3P","SE_GP21","SE_GP5","SE_GP7","CAU_G_CBRN_m04_3cd_hood","CAU_G_CBRN_m04_blk_hood","CAU_G_CBRN_m04_blue_hood","CAU_G_CBRN_m04_cadpat_hood","CAU_G_CBRN_m04_ce_hood","CAU_G_CBRN_m04_dcp_hood","CAU_G_CBRN_m04_ddpm_hood","CAU_G_CBRN_m04_dpm_hood","CAU_G_CBRN_m04_fleck_hood","CAU_G_CBRN_m04_flora_hood","CAU_G_CBRN_m04_gray_hood","CAU_G_CBRN_m04_green_hood","CAU_G_CBRN_m04_hoodless","CAU_G_CBRN_m04_jeitai_hood","CAU_G_CBRN_m04_m81_hood","CAU_G_CBRN_m04_m84_hood","CAU_G_CBRN_m04_m90_hood","CAU_G_CBRN_m04_mc_hood","CAU_G_CBRN_m04_mtp_hood","CAU_G_CBRN_m04_orange_hood","CAU_G_CBRN_m04_red_hood","CAU_G_CBRN_m04_tstripe_hood","CAU_G_CBRN_m04_tubitak_hood","CAU_G_CBRN_m04_ucp_hood","CAU_G_CBRN_m04_urban_hood","CAU_G_CBRN_m04_white_hood","CAU_G_CBRN_m04_winter_hood","CAU_G_CBRN_m04_yellow_hood","SE_M17","SCE_G_M334","SCE_G_M40_1","SCE_G_M40_2","CAU_G_CBRN_m50_3cd_hood","CAU_G_CBRN_m50_blk_hood","CAU_G_CBRN_m50_blue_hood","CAU_G_CBRN_m50_cadpat_hood","CAU_G_CBRN_m50_ce_hood","CAU_G_CBRN_m50_dcp_hood","CAU_G_CBRN_m50_ddpm_hood","CAU_G_CBRN_m50_dpm_hood","CAU_G_CBRN_m50_fleck_hood","CAU_G_CBRN_m50_flora_hood","CAU_G_CBRN_m50_gray_hood","CAU_G_CBRN_m50_green_hood","CAU_G_CBRN_m50_hoodless","CAU_G_CBRN_m50_jeitai_hood","CAU_G_CBRN_m50_m81_hood","CAU_G_CBRN_m50_m84_hood","CAU_G_CBRN_m50_m90_hood","CAU_G_CBRN_m50_mc_hood","CAU_G_CBRN_m50_mtp_hood","CAU_G_CBRN_m50_orange_hood","CAU_G_CBRN_m50_red_hood","CAU_G_CBRN_m50_tstripe_hood","CAU_G_CBRN_m50_tubitak_hood","CAU_G_CBRN_m50_ucp_hood","CAU_G_CBRN_m50_urban_hood","CAU_G_CBRN_m50_white_hood","CAU_G_CBRN_m50_winter_hood","CAU_G_CBRN_m50_yellow_hood","SE_PBF","SE_PPM88","SE_Respirator","G_Respirator_blue_F","SE_Respirator_Goggles","G_Respirator_white_F","G_Respirator_yellow_F","CAU_G_CBRN_s10_3cd","CAU_G_CBRN_s10_blk","CAU_G_CBRN_s10_blue","CAU_G_CBRN_s10_cadpat","CAU_G_CBRN_s10_ce","CAU_G_CBRN_s10_dcp","CAU_G_CBRN_s10_ddpm","CAU_G_CBRN_s10_dpm","CAU_G_CBRN_s10_fleck","CAU_G_CBRN_s10_flora","CAU_G_CBRN_s10_gray","CAU_G_CBRN_s10_green","CAU_G_CBRN_s10_jeitai","CAU_G_CBRN_s10_m81","CAU_G_CBRN_s10_m84","CAU_G_CBRN_s10_m90","CAU_G_CBRN_s10_mc","CAU_G_CBRN_s10_mtp","CAU_G_CBRN_s10_orange","CAU_G_CBRN_s10_red","CAU_G_CBRN_s10_tstripe","CAU_G_CBRN_s10_tubitak","CAU_G_CBRN_s10_ucp","CAU_G_CBRN_s10_urban","CAU_G_CBRN_s10_white","CAU_G_CBRN_s10_winter","CAU_G_CBRN_s10_yellow","SE_S10"
+			
+			]findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
     ) then {
         _protection = _protection + 0.3;
     };
@@ -68,9 +61,10 @@ if (
 };
 if (
     [
-        "B_SCBA_01_base_F",
-        "B_CombinationUnitRespirator_01_Base_F"
-    ] findIf {_backpack isKindOf _x} > -1
+	"B_SCBA_01_F",
+	"B_CombinationUnitRespirator_01_F",
+	"SE_SEVA_Oxygen_Tank"
+	] findIf {_backpack isKindOf _x} > -1
 ) then {
     _protection = _protection + 0.1;
 };
