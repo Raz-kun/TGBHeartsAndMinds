@@ -9,6 +9,10 @@ enabledebugconsole = 1;
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
 #include "core\fnc\debug\defines.hpp"
+#include "bon_recruit_units\dialog\common.hpp"
+#include "bon_recruit_units\dialog\recruitment.hpp"
+#include "KPGUI\KPGUI_defines.hpp"
+#include "KPCF\ui\KPCF_dialog.hpp"
 
 class RscTitles {
     class Default {
@@ -19,6 +23,7 @@ class RscTitles {
     };
     #include "core\fnc\lift\rsc.hpp"
     #include "core\fnc\debug\dlg.hpp"
+    #include "scripts\cbrn\rsctitles.hpp"
 };
 
 #include "core\def\param.hpp"
@@ -29,7 +34,14 @@ class RscTitles {
 
 class CfgFunctions {
     // add your own functions below
+	#include "KPCF\KPCF_functions.hpp" //KP Crate Filler
+	#include "scripts\cbrn\funcs.hpp"    //Diwako CBRN script
 };
+
+class CfgSounds {
+    sounds[] = {};
+    #include "scripts\cbrn\sounds\sounds.hpp" //Diwako CBRN Sound
+}
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
