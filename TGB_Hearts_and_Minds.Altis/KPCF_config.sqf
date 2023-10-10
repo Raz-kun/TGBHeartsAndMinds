@@ -14,10 +14,10 @@ KPCF_cratefillerBase = [
 ];
 
 // The Spawn object is the point where crates will spawn and acts the center for the KPCF_spawnRadius
-KPCF_cratefillerSpawn = "Land_HelipadCivil_F";
+KPCF_cratefillerSpawn = "Land_HelipadSquare_F";
 
 // This variable defines if the player will be ablea to spawn and delete crates
-KPCF_canSpawnAndDelete = false;
+KPCF_canSpawnAndDelete = true;
 
 // If set to "true" the item lists will be generated from the config
 KPCF_generateLists = true;
@@ -32,7 +32,9 @@ KPCF_interactRadius = 5;
 // Defines the available crates
 KPCF_crates = [
     "B_supplyCrate_F",
-    "CargoNet_01_box_F"
+    "CargoNet_01_box_F",
+    "ACE_medicalSupplyCrate",
+    "ACE_Box_Ammo"
 ];
 
 
