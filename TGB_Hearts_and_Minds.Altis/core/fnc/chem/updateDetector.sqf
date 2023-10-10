@@ -39,7 +39,7 @@ Author:
     if (_level < btc_chem_range) then {
         _level = 5;
     } else {
-        _level = (floor (btc_chem_range / _level * 50)) / 10;
+        _level = (floor (btc_chem_range / _level * 10)) / 10;
     };
 
     _obj ctrlAnimateModel ["Threat_Level_Source", _level, true]; //Displaying a threat level (value between 0.0 and 1.0)
