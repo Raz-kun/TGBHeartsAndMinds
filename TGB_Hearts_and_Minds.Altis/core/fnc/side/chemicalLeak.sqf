@@ -139,6 +139,7 @@ _composition_pattern append [
 ];
 
 private _composition_objects = [_pos, random 360, _composition_pattern] call btc_fnc_create_composition;
+private _chemzone = [_pos, random 6, random [25, 50, 75], 100] call cbrn_fnc_createZone; 
 
 private _chemical = [];
 for "_i" from 1 to (5 + round random 5) do {
@@ -164,6 +165,9 @@ waitUntil {sleep 5;
 };
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
+	//To turn off CBRN trigger and zone
+	_chemzone setVariable ["cbrn_active", false, true];
+	sleep 5;
     [[], _composition_objects + _chemical] call btc_fnc_delete;
 };
 
@@ -183,6 +187,8 @@ waitUntil {sleep 5;
 };
 
 [[], _composition_objects + _chemical] call btc_fnc_delete;
+//Delete Diwako CBRN Trigger Zone
+_chemzone setVariable ["cbrn_active", false, true];
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
