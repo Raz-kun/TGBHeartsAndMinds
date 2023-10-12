@@ -107,7 +107,18 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
         _params call btc_log_fnc_inventoryRestore
     }, {true}, {}, _helipad, [0, 0, 0.4], 5] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions", "Tool"], _action] call ace_interact_menu_fnc_addActionToObject;
-
+	
+	//Fortify Resupply
+	_action = ["Fortify", "Fortify", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\F_ca.paa", {}, {true} 
+			] call ace_interact_menu_fnc_createAction;
+				[_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+				
+	_action = ["Resupply Fortification", "Resupply Fortification", "\A3\Ui_f\data\GUI\Cfg\KeyframeAnimation\IconCurve_CA.paa", 
+			{[west, 50, false] call ace_fortify_fnc_updateBudget; //To add Fortify budget to side with hint
+			}, {true}, {}] call ace_interact_menu_fnc_createAction;
+			
+	[_object, 0, ["ACE_MainActions", "Fortify"], _action] call ace_interact_menu_fnc_addActionToObject;
+	
     //Bodybag
     if (btc_p_respawn_ticketsAtStart isNotEqualTo -1) then {
         _action = ["Bodybag", localize "STR_BTC_HAM_ACTION_LOGPOINT_BODYBAG", "\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa", {
