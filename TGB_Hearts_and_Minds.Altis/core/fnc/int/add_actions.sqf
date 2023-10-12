@@ -114,7 +114,7 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
 				[_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 				
 	_action = ["Resupply Fortification", "Resupply Fortification", "\A3\Ui_f\data\GUI\Cfg\KeyframeAnimation\IconCurve_CA.paa", 
-			{[west, 50, false] call ace_fortify_fnc_updateBudget; //To add Fortify budget to side with hint
+			{[west, 50, true] call ace_fortify_fnc_updateBudget; //To add Fortify budget to side with hint
 			}, {true}, {}] call ace_interact_menu_fnc_createAction;
 			
 	[_object, 0, ["ACE_MainActions", "Fortify"], _action] call ace_interact_menu_fnc_addActionToObject;
