@@ -139,7 +139,7 @@ _composition_pattern append [
 ];
 
 private _composition_objects = [_pos, random 360, _composition_pattern] call btc_fnc_create_composition;
-private _chemzone = [_pos, random 6, random [25, 50, 75], 100] call cbrn_fnc_createZone; 
+private _chemzone = [_pos, random 5, random [5, 15, 25], 50] call cbrn_fnc_createZone; 
 
 private _chemical = [];
 for "_i" from 1 to (5 + round random 5) do {
