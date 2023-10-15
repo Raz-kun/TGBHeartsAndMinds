@@ -85,7 +85,8 @@ if (_hasChemDetector && {visibleWatch}) then {
     private _ui = uiNamespace getVariable ["RscWeaponChemicalDetector", displayNull];
     if !(isNull _ui) then {
         private _obj = _ui displayCtrl 101;
-        _obj ctrlAnimateModel ["Threat_Level_Source", (_max - 0.05 + (random 0.1)) max 0, true];
+        //turn off animation on the chemical detector
+		//_obj ctrlAnimateModel ["Threat_Level_Source", (_max - 0.05 + (random 0.1)) max 0, true];
     };
 };
 
