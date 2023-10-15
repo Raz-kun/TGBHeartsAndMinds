@@ -71,10 +71,30 @@ if (
 if (_uniform isNotEqualTo "") then {
     _protection = _protection + 0.4;
     if (
-        [
-            "cbrn"
-        ] findIf {_x in _uniform} > -1
-    ) then {
+        ["U_C_CBRN_Suit_01_Blue_F",
+    "U_B_CBRN_Suit_01_MTP_F",
+    "U_B_CBRN_Suit_01_Tropic_F",
+    "U_C_CBRN_Suit_01_White_F",
+    "U_B_CBRN_Suit_01_Wdl_F",
+    "U_I_CBRN_Suit_01_AAF_F",
+    "U_I_E_CBRN_Suit_01_EAF_F",
+	"CAU_U_CBRN_3cd","CAU_U_CBRN_blk",
+	"CAU_U_CBRN_blue","CAU_U_CBRN_cadpat",
+	"CAU_U_CBRN_ce","SCE_ClearSky_CBRN",
+	"CAU_U_CBRN_dcp","CAU_U_CBRN_ddpm",
+	"CAU_U_CBRN_dpm","SCE_Duty_CBRN",
+	"CAU_U_CBRN_fleck","CAU_U_CBRN_flora",
+	"SCE_Freedom_CBRN","CAU_U_CBRN_gray",
+	"CAU_U_CBRN_green","CAU_U_CBRN_jeitai",
+	"SCE_Loner_CBRN","CAU_U_CBRN_m81",
+	"CAU_U_CBRN_m84","CAU_U_CBRN_m90",
+	"CAU_U_CBRN_mc","SCE_Military_CBRN",
+	"CAU_U_CBRN_mtp","CAU_U_CBRN_orange",
+	"CAU_U_CBRN_red","CAU_U_CBRN_tstripe",
+	"CAU_U_CBRN_tubitak","CAU_U_CBRN_ucp",
+	"CAU_U_CBRN_urban","CAU_U_CBRN_white",
+	"CAU_U_CBRN_winter","CAU_U_CBRN_yellow"] findIf {_x in _uniform} > -1
+    ) 	then {
         _protection = _protection + 0.2;
     };
 };
