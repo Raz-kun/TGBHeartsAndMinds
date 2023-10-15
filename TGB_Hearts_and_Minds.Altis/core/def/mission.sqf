@@ -404,7 +404,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
-btc_fob_structure = "Land_Cargo_HQ_V1_F";
+btc_fob_structure = "Land_Cargo_HQ_V3_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
@@ -495,11 +495,21 @@ btc_construction_array =
             "Land_Mil_WallBig_4m_F",
             "Land_Mil_WallBig_Corner_F",
             "Land_PortableLight_double_F",
+			"Land_LampStreet_02_F",
+			"Land_TentLamp_01_suspended_F",
             "Land_Pod_Heli_Transport_04_medevac_black_F"
         ],
         [
             //"Static"
-        ] + (_allClassSorted select {(
+			"RHS_M119_WD",
+			"RHS_M252_WD",
+			"UK3CB_CW_US_B_LATE_M240_nest_des",
+			"UK3CB_B_Static_M240_Elcan_High_USMC_W",
+			"RHS_M2StaticMG_USMC_WD",
+			"RHS_TOW_TriPod_USMC_WD",
+			"RHS_MK19_TriPod_USMC_WD",
+			"B_G_HMG_02_high_F"
+        ]/* + (_allClassSorted select {(
             _x isKindOf "GMG_TriPod" ||
             {_x isKindOf "StaticMortar"} ||
             {_x isKindOf "HMG_01_base_F"} ||
@@ -507,16 +517,25 @@ btc_construction_array =
             {_x isKindOf "AT_01_base_F"}) && {
                 getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
             }
-        }),
+        })*/,
         [
             //"Ammobox"
-            "Land_WoodenBox_F"
+            "B_CargoNet_01_ammo_F",
+			"ACE_medicalSupplyCrate_advanced",
+			"ACE_Box_Misc",
+			"ACE_Box_82mm_Mo_Combo",
+			"rhsusf_launcher_crate",
+			"rhsusf_weapon_crate",
+			"rhsusf_mags_crate",
+			"Box_NATO_Equip_F",
+			"Box_NATO_AmmoOrd_F",
+			"Land_WoodenBox_F"
 
-        ] + (_allClassSorted select {
+        ] /* + (_allClassSorted select {
             _x isKindOf "ReammoBox_F" &&
             {!(_x isKindOf "Slingload_01_Base_F")} &&
             {!(_x isKindOf "Pod_Heli_Transport_04_base_F")}
-        }),
+        })*/,
         [
             //"Containers"
 
@@ -531,13 +550,15 @@ btc_construction_array =
         ],
         [
             //"Decontamination"
-            "DeconShower_01_F"
+            "DeconShower_01_F",
+			"DeconShower_02_F"
         ],
         [
             //"Vehicle logistic"
             "ACE_Wheel",
             "ACE_Track",
             "B_Slingload_01_Ammo_F",
+			"B_Slingload_01_Repair_F",
             "B_Slingload_01_Fuel_F"
         ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
     ]
