@@ -13,6 +13,7 @@ enabledebugconsole = 1;
 #include "bon_recruit_units\dialog\recruitment.hpp"
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"
+#include "TGB\TGB_dialog.hpp"
 
 class RscTitles {
     class Default {
