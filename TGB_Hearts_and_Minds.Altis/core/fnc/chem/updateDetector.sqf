@@ -37,7 +37,7 @@ Author:
 
     private _level = selectMin (btc_chem_contaminated apply {player distance _x});
     if (_level < btc_chem_range) then {
-        _level = 5;
+        _level = 1;
     } else {
         _level = (floor (btc_chem_range / _level * 10)) / 10;
     };

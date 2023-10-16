@@ -1,5 +1,5 @@
 // how much damage before death, 50% starts internal contamination
-cbrn_maxDamage = 100;
+cbrn_maxDamage = 200;
 
 // backpacks considered oxygen tanks
 cbrn_backpacks = [	"B_SCBA_01_F",
@@ -54,7 +54,7 @@ cbrn_allowPassiveDamage = true;
 cbrn_deconWaterTime = 60 * 2;
 
 // healing rate for each second, does nothing if 0 or below, or player while player is experiencing passive contamination
-cbrn_healingRate = 0;
+cbrn_healingRate = 0.5;
 
 
 // FOGGING SETTINGS
