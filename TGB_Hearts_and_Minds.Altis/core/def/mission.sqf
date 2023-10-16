@@ -469,6 +469,7 @@ btc_construction_array =
         "Containers",
         "Supplies",
         "FOB",
+		"Lighting",
         "Decontamination",
         "Vehicle Logistic"
     ],
@@ -494,9 +495,6 @@ btc_construction_array =
             "Land_Mil_ConcreteWall_F",
             "Land_Mil_WallBig_4m_F",
             "Land_Mil_WallBig_Corner_F",
-            "Land_PortableLight_double_F",
-			"Land_LampStreet_02_F",
-			"Land_TentLamp_01_suspended_F",
             "Land_Pod_Heli_Transport_04_medevac_black_F"
         ],
         [
@@ -548,6 +546,14 @@ btc_construction_array =
             //"FOB"
             btc_fob_mat
         ],
+		[
+			//"Lighting"
+			"Land_PortableLight_double_F",
+			"Land_LampStreet_02_F",
+			"Land_FloodLight_F",
+			"PortableHelipadLight_01_white_F",
+			"Land_TentLamp_01_suspended_F"
+		],
         [
             //"Decontamination"
             "DeconShower_01_F",
